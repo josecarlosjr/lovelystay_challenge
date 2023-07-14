@@ -21,7 +21,7 @@ The container network was created only with the purpose to make easy the communi
 The **run.sh** script was created to facilitate the environment creation. You just need to execute the **run.sh** script by typing `sh run.sh`, and the script will spin-up the containers and access the **APP** container automatically.
 Once you have access the **APP** container, you just need to run `node app.js` with the following parameters:
 
-- **--all**: Display all the users stored in the database (the app will show the 2 most used programming languages by the user);
+- **--all**: Display all the users stored in the database (e.g. `node app.js --all`) (the app will show the 2 most used programming languages by the user);
 - **-l**: Display the users based on their locations (e.g. `node app.js -l Portugal`);
 - **-pl**: Display the users based on their programming languages stored in the databse (e.g. `node app.js -pl Python`).
 
