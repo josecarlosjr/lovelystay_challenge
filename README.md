@@ -1,8 +1,8 @@
 # lovelystay_challenge
 DevOps Challenge 
-Docker version 20.10.21
-PostgreSQL version psql 15.3
-Node.js version v14.21.3
+- Docker version 20.10.21
+- PostgreSQL version psql 15.3
+- Node.js version v14.21.3
 
 
 ## Information
