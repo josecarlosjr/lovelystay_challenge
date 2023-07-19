@@ -29,7 +29,7 @@ Once you have accessed the **APP** container, you just need to run `node app.js`
 - **-l**: Display the users based on their locations (e.g. `node app.js -l Portugal`);
 - **-pl**: Display the users based on their programming languages stored in the databse (e.g. `node app.js -pl Python`).
 
-Examples: `node app.js <username>` to add a user, `node app.js -l <location>` to display a user by typing the location and `node app.js -pl` to display a user by typing the programming language.
+Examples: `node app.js <username>` to add a user, `node app.js -l <location>` to display a user by typing the location and `node app.js -pl <programming-language>` to display a user by typing the programming language.
 
   ### NOTE:
   The app is responsive to some situations:
