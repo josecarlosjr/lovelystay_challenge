@@ -1,0 +1,42 @@
+version: '3'
+services:
+  postgreedb:
+    image: postgres:latest
+    networks: 
+      lovely_network:
+        ipv4_address: "192.168.254.10"
+    environment:
+      POSTGRES_USER: jose 
+      POSTGRES_PASSWORD: jose123
+      POSTGRES_DB: github_db
+    ports:
+      - 5432:5432
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgreedb
+    #command: sh -c "chmod +x /usr/local/bin/wait-for-it.sh && /usr/local/bin/wait-for-it.sh -t 30 192.168.254.10:5432"
+    #command: sh -c "node app.js josecarlosjr"
+    #command: sh -c ""
+
+    environment:
+      DB_USER: jose
+      DB_PASSWORD: jose123
+      DB_HOST: 192.168.254.10
+      DB_PORT: 5432
+      DB_NAME: github_db
+    networks:
+      lovely_network:
+        ipv4_address: "192.168.254.9"
+ 
+networks:
+  lovely_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "192.168.254.0/24"    
