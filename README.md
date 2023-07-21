@@ -1,5 +1,9 @@
 # lovelystay_challenge
 DevOps Challenge 
+- Docker version 20.10.21
+- PostgreSQL version psql 15.3
+- Node.js version v14.21.3
+
 
 ## Information
 This is a simple **JavaScript + Nodejs + PostgreeSQL** based app. **TypeScript was not used in this challenge due to the lack of knowledge on this technology**.
@@ -19,13 +23,13 @@ The container network was created only with the purpose to make easy the communi
 
 ### Instructions on how to run the app
 The **run.sh** script was created to facilitate the environment creation. You just need to execute the **run.sh** script by typing `sh run.sh`, and the script will spin-up the containers and access the **APP** container automatically.
-Once you have access the **APP** container, you just need to run `node app.js` with the following parameters:
+Once you have accessed the **APP** container, you just need to run `node app.js` with the following parameters:
 
 - **--all**: Display all the users stored in the database (e.g. `node app.js --all`) (the app will show the 2 most used programming languages by the user);
 - **-l**: Display the users based on their locations (e.g. `node app.js -l Portugal`);
 - **-pl**: Display the users based on their programming languages stored in the databse (e.g. `node app.js -pl Python`).
 
-Examples: `node app.js <username>` to add a user, `node app.js -l <location>` to display a user by location and `node app.js -pl` to display a user by the programming language.
+Examples: `node app.js <username>` to add a user, `node app.js -l <location>` to display a user by typing the location and `node app.js -pl <programming-language>` to display a user by typing the programming language.
 
   ### NOTE:
   The app is responsive to some situations:
